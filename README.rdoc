@@ -1,0 +1,36 @@
+= simplenom
+
+simplenom is quickly hacked together Ruby script to check if there are any standard or security yum updates for your system. Basically it just runs "yum check-update" and "yum --security check-update" on your machine (which obviously has to use yum for package management, for example, Amazon's standard Linux dist) and it'll email you (using the awesome "pony" gem) when you need to update your packages.
+
+The script is meant to be added to your crontab (on Amazon's Linux you don't have to be root so you can just add this to your regular user's crontab) as a daily (or weekly? whatever) cron job.
+
+== Dependencies
+
+Make sure you have pony installed
+
+	[sudo] gem install pony
+
+== Configuration
+
+Open the simplenom.rb and edit the $targetaddress and $fromaddress global vars
+
+== History
+
+Version 0.1 of simplenom, released 12th of June 2011
+ - First release
+
+== Version
+
+   Copyright 2011 Christian Frichot
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
